@@ -1,0 +1,7 @@
+{
+  "name": "app_Hibrida_NewTech",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
