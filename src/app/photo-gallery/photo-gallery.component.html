@@ -1,0 +1,33 @@
+<!-- Componente de galeria-->
+
+<!--barra inicial-->
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+     Camara
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!--Boton de Camara-->
+<ion-content  [fullscreen]="true">
+  <ion-fab vertical="center" horizontal="center" slot="fixed">
+
+    <ion-fab-button (click)="addNew_picture()"> 
+      <ion-icon name="camera"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6"
+      *ngFor="let foto of photo.fotos_G; index as position">
+      <ion-img [src]="foto.webviewPath"></ion-img>
+        
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

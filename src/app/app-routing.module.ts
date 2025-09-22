@@ -1,16 +1,24 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import {PhotoGalleryComponent} from '../app/photo-gallery/photo-gallery.component';
+import {GaleriaComponent} from '../app/galeria/galeria.component'
+import { AppComponent } from './app.component';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+
+    path: 'tabs',
+    component: AppComponent,
+    children: [
+
+      {path: 'camera', component: PhotoGalleryComponent},
+      {path: 'gallery', component: GaleriaComponent},
+      {path: '', redirectTo:'home', pathMatch: 'full'},
+
+    ]
   },
-  {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  },
+  {path: '', redirectTo: 'camera', pathMatch:'full'}
+
 ];
 
 @NgModule({
