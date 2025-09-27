@@ -23,7 +23,7 @@
   <ion-grid>
     <ion-row>
       <ion-col size="6"
-      *ngFor="let foto of photo.fotos_G; index as position">
+      *ngFor="let foto of photo_service.fotos_G; index as position">
       <ion-img [src]="foto.webviewPath"></ion-img>
         
       </ion-col>

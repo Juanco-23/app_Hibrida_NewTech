@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {IonicModule} from '@ionic/angular';
+import {CommonModule} from '@angular/common';
 
 //Importacion del servicio photo
 import {photo} from '../services/photo';
@@ -8,7 +9,7 @@ import {photo} from '../services/photo';
   selector: 'app-galeria',
   templateUrl: './galeria.component.html',
   styleUrls: ['./galeria.component.scss'],
-  imports: [IonicModule],
+  imports: [IonicModule, CommonModule],
 })
 
 export class GaleriaComponent  implements OnInit {
