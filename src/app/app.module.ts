@@ -8,17 +8,19 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 //Componentes
-import { PhotoGalleryComponent } from '../app/photo-gallery/photo-gallery.component';
-import { GaleriaComponent } from '../app/galeria/galeria.component';
-import {LoginUserComponent} from '../app/login-user/login-user.component';
+import {LoginUserComponent} from './login-user/login-user.component';
+import {PhotoGalleryComponent} from './photo-gallery/photo-gallery.component';
+import {GaleriaComponent} from './galeria/galeria.component';
+import {TabsPage} from './tabs/tabs.page';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule, IonicModule.forRoot(),
     AppRoutingModule,
+    LoginUserComponent,
     PhotoGalleryComponent,
     GaleriaComponent,
-    LoginUserComponent],
+    TabsPage,],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

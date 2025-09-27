@@ -22,13 +22,13 @@ const routes: Routes = [
 
       {path: 'camera', component: PhotoGalleryComponent},
       {path: 'gallery', component: GaleriaComponent},
-      {path: '', redirectTo: '/tabs/gallery', pathMatch: 'full' }
+      {path: '', redirectTo: 'tabs/gallery', pathMatch: 'full' }
     ]
   },
 
 
   //Redideccion inicial
-  {path: '', redirectTo: '/login_User', pathMatch:'full'}
+  {path: '', redirectTo: 'login_User', pathMatch:'full'}
 
 ];
 
